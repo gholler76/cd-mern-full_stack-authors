@@ -36,13 +36,14 @@ module.exports.findOneRapper = (req, res) => {
 
 module.exports.updateOneRapper = (req, res) => {
 	const { id } = req.params;
-	const { emcee, song, lyrics } = req.body;
+	const { emcee, song, lyrics, likes } = req.body;
 	Rapper.findOneAndUpdate(
 		{ _id: id },
 		{
 			emcee,
 			song,
 			lyrics,
+			likes,
 		},
 		{
 			new: true,

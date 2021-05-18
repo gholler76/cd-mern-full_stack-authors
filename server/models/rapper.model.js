@@ -13,6 +13,10 @@ const RapperSchema = new mongoose.Schema({
 		type: String,
 		required: [true, "Type in those barz, son!"],
 	},
+	likes: {
+		type: Number,
+		default: 0,
+	},
 });
 
 const Rapper = mongoose.model("Rapper", RapperSchema);
